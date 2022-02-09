@@ -259,8 +259,6 @@ console.log(`I like to drink ${drink}`);
 //condensed
 console.log(`I like to drink ${age >= 18 ? 'wine' : 'water'}`);
 
-*/
-
 
 //Coding Challenge #4
 const billAmount = prompt('How much is the bill?');
@@ -270,6 +268,11 @@ const totalTip = tipPercent*billAmount;
 //not yet working
 console.log(`The tip should be $${totalTip.toFixed(2)} , which should be ${(tipPercent*100).toFixed(0)}% of the total bill, bringing the total to ${totalTip+billAmount}`);
 
+// working code:
+const bill = 430;
+const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
 
+*/
 
 
