@@ -44,12 +44,32 @@ const age2 = calcAge2(1991);
 
 console.log(age1, age2);
 
-*/
-
 
 //arrow function
 const calcAge3 = birthyear => 2037 - birthyear
 const age3 = calcAge3(1991);
 console.log(age3);
 
+const yearsUntilRetirement = (birthyear, firstName) => {
+    const age = 2022 - birthyear;
+    const retirement = 65 - age;
+    return `${firstName} retires in ${retirement} years`;
+}
+console.log(yearsUntilRetirement(1991, 'DeezNutz'));
+console.log(yearsUntilRetirement(1995, 'Gurrik'));
 
+*/
+
+function cutFruitPieces (fruit){
+    return fruit * 4;
+}
+
+function fruitProcessor(apples, oranges){
+    const applePieces = cutFruitPieces(apples);
+    const orangePieces = cutFruitPieces(oranges);
+
+    const juice = `juice with ${applePieces} pieces of apples and ${orangePieces} pieces of oranges`
+    return juice;
+}
+
+console.log(fruitProcessor(2, 3));
