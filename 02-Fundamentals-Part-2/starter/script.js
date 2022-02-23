@@ -98,8 +98,6 @@ console.log(yearsUntilRetirement(1991, 'DeezNutz'));
 console.log()
 
 
-
-
 // ************* Coding Challenge 1 ************* 
 
 
@@ -233,23 +231,193 @@ if(friends.includes('Bruce')){
     console.log('You do not have a friend named Bruce');
 }
 
-*/
+
 
 // ************* Coding Challenge 2 ************* 
 
-const billAmount = prompt('How much is the bill?');
-const tipPercent = billAmount >= 50 && billAmount <= 300 ? 0.15 : 0.20;
-const totalTip = tipPercent*billAmount;
+const calcTip = function(bill){
+    return bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
+}
 
-//not yet working
-console.log(`The tip should be $${totalTip.toFixed(2)} , which should be ${(tipPercent*100).toFixed(0)}% of the total bill, bringing the total to ${totalTip+billAmount}`);
+const bills = [125, 555, 44];
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
 
-// working code:
-const bill = 430;
-const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
-console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
+console.log(bills, tips);
 
 
+////////////// Objects //////////////////
+const jonasArray = [
+    'Jonas',
+    'Schmedtmann',
+    2021 - 1991, 
+    'Teacher',
+    ['Michael', 'Peter', 'Steven']
+];
+
+// object literal syntax
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    age: 2021 - 1991, 
+    job: 'Teacher',
+    friends: ['Michael', 'Peter', 'Steven']
+}
+
+// Dot notation syntax
+console.log(jonas.lastName);
+
+
+// Bracket notation syntax
+console.log(jonas['lastName']);
+
+const nameKey = 'Name';
+console.log(jonas['first' + nameKey]);
+console.log(jonas['last' + nameKey]);
+
+//Why use bracket notation syntax?
+const interestedIn = prompt('What do you want to know about Joonas? Choose between firstName, lastName, age, job, friends')
+console.log(jonas[interestedIn]);
+if(jonas[interestedIn]){
+    console.log(jonas[interestedIn]);
+}else{
+    console.log('Invalid request! Choose between firstName, lastName, age, job, and friends');
+}
+
+//adds these to the end of the object
+jonas.location = 'Portugal';
+jonas['twitter'] = '@jonasschmedtman';
+console.log(jonas);
+
+//Challenge
+// Jonas has 3 friends and his best friend is named michael
+console.log(`${jonas.firstName} ${jonas.lastName} has ${jonas.friends.length} friends, but his best friend is ${jonas.friends[0]}`);
+
+
+////////////// Object Methods //////////////////
+
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    birthYear: 1991, 
+    job: 'Teacher',
+    friends: ['Michael', 'Peter', 'Steven'],
+    hasDriversLicense: true,
+
+    // calcAge: function(birthYear) {
+    //     return 2022-birthYear;
+    // }    
+
+    // calcAge: function() {
+    //     return 2022 - this.birthYear;
+    // }
+
+    calcAge: function() {
+        this.age = 2022 - this.birthYear;
+        return this.age;
+    },
+
+    //Challenge
+    //Jonas is a 31 Year old teacher and he has a/no Drivers License
+    getSummary: function() {
+        return `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and has ${this.hasDriversLicense ? 'a' : 'no'} drivers license.`
+    }
+};
+
+console.log(jonas.calcAge());
+console.log(jonas['calcAge']());
+
+console.log(jonas.age);
+console.log(jonas.age);
+console.log(jonas.age);
+
+//log the challenge
+console.log(jonas.getSummary());
 
 
 
+////////////////////////////////
+// Coding Challenge 3 
+////////////////////////////////
+
+const mark = {
+    firstName: 'Mark',
+    lastName: 'Miller',
+    mass: 78,
+    height: 1.69,
+
+    calcBMI: function(){
+        this.bmi = this.mass / this.height**2;
+        return this.bmi;
+    }
+}
+const john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    mass: 92,
+    height: 1.95,
+
+    calcBMI: function(){
+        this.bmi = this.mass / this.height**2;
+        return this.bmi;
+    }
+}
+mark.calcBMI();
+john.calcBMI();
+
+console.log(mark.bmi, john.bmi);
+
+let johnHigherBMI;
+
+if(john.bmi > mark.bmi){
+    console.log(`${john.firstName} ${john.lastName}'s BMI ${john.bmi} is higher than ${mark.firstName} ${mark.lastName}'s BMI ${mark.bmi} `);
+    johnHigherBMI = true;
+} else {
+    console.log(`${john.firstName} ${john.lastName}'s BMI ${john.bmi} is lower than ${mark.firstName} ${mark.lastName}'s BMI ${mark.bmi} `);
+    johnHigherBMI = false;
+}
+
+//second option is to test a boolean
+console.log(`${john.firstName} ${john.lastName}'s BMI ${john.bmi} is ${johnHigherBMI ? 'higher' : 'lower'} than ${mark.firstName} ${mark.lastName}'s BMI ${mark.bmi} `);
+
+
+
+/////////////////////////////////
+// For Loop Syntax
+/////////////////////////////////
+
+//method without loops
+// console.log('lifting weights repettition 1');
+// console.log('lifting weights repettition 2');
+// console.log('lifting weights repettition 3');
+// console.log('lifting weights repettition 4');
+// console.log('lifting weights repettition 5');
+
+//for loop runs while the condition is true
+for(let rep = 1; rep <= 30; rep++){
+    console.log(`lifting weights repettition ${rep}`);
+}
+
+*/
+
+const jonas = [
+    'Jonas',
+    'Schmedtmann',
+    2021 - 1991, 
+    'Teacher',
+    ['Michael', 'Peter', 'Steven'],
+    true
+];
+
+const types = [];
+
+for(let i=0; i<jonas.length; i++){
+    console.log(jonas[i], typeof jonas[i]);
+
+    //filling types array
+    //types[i] = typeof jonas[i];
+    types.push(typeof jonas[i]);
+}
+
+console.log(types);
+
+const years = [1991, 2007, ]
