@@ -73,22 +73,34 @@ function fruitProcessor(apples, oranges){
 
 console.log(fruitProcessor(2, 3));
 
-*/
+
 const calcAge = function(birthYear){
-    return 2022 - birthyear;
+    return 2022 - birthYear;
 }
 
-const yearsUntilRetirement = function(birthyear, firstName){
-    const age = calcAge(birthyear);
+const yearsUntilRetirement = function(birthYear, firstName){
+    const age = calcAge(birthYear);
     const retirement = 65 - age;
     //return `${firstName} retires in ${retirement} years`;
     if(retirement>0){
+        console.log(`${firstName} retires in ${retirement} years`);
          return retirement;
     }else{
+        console.log(`${firstName} has alreadt retired`);
         return -1;
     }
     
 }
+console.log(yearsUntilRetirement(1995, 'DeezNutz'));
+console.log();
 
-console.log(yearsUntilRetirement(1991, 'DeezNutz'));
-console.log()
+*/
+
+
+const calcAverage = (a, b, c) => (a + b + c)/3;
+console.log(calcAverage(3,4,5));
+
+function calculateAverage(score1, score2, score3){
+    let scoreAverage = calcAverage;
+    returnscore;
+}
