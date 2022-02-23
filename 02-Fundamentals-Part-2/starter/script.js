@@ -396,9 +396,14 @@ console.log(`${john.firstName} ${john.lastName}'s BMI ${john.bmi} is ${johnHighe
 for(let rep = 1; rep <= 30; rep++){
     console.log(`lifting weights repettition ${rep}`);
 }
+for(let i=0; i<jonas.length; i++){
+    console.log(jonas[i], typeof jonas[i]);
 
-*/
+    //filling types array
+    //types[i] = typeof jonas[i];
+    types.push(typeof jonas[i]);
 
+    
 const jonas = [
     'Jonas',
     'Schmedtmann',
@@ -420,4 +425,55 @@ for(let i=0; i<jonas.length; i++){
 
 console.log(types);
 
-const years = [1991, 2007, ]
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for(let i = 0; i<years.length; i++){
+    ages.push(2022 - years[i]);
+}
+
+console.log(ages);
+
+//continue or break 
+console.log('--- OnlyStrings ---');
+for(let i=0; i<jonas.length; i++){
+    if(typeof jonas[i] !== 'string') continue;
+
+    console.log(jonas[i], typeof jonas[i]);
+}
+
+console.log('--- Break with Number ---')
+for(let i=0; i<jonas.length; i++){
+    if(typeof jonas[i] === 'number') continue;
+
+    console.log(jonas[i], typeof jonas[i]);
+}
+
+*/
+
+const jonas = [
+    'Jonas',
+    'Schmedtmann',
+    2021 - 1991, 
+    'Teacher',
+    ['Michael', 'Peter', 'Steven']
+];
+
+// 0,1, ...., 4
+// 4, 3, ..., 1
+
+for(let i =jonas.length - 1;i>=0; i--){
+    console.log(i, jonas[i]);
+}
+
+
+
+for(let exercise = 1; exercise <= 3; exercise++) {
+    console.log(`------ Starting Exercise ${exercise}`);
+}
+for(let rep = 1; rep<6; rep++){
+    console.log(`Lifting weights repettition ${rep}`);
+}
+
+
+
