@@ -449,8 +449,6 @@ for(let i=0; i<jonas.length; i++){
     console.log(jonas[i], typeof jonas[i]);
 }
 
-*/
-
 const jonas = [
     'Jonas',
     'Schmedtmann',
@@ -467,13 +465,36 @@ for(let i =jonas.length - 1;i>=0; i--){
 }
 
 
+////////////////////////////////
+// For loop example 
+////////////////////////////////
 
+//Outer loop
 for(let exercise = 1; exercise <= 3; exercise++) {
     console.log(`------ Starting Exercise ${exercise}`);
+
+    //Loop within a loop
+    for(let rep = 1; rep < 6; rep++){
+        console.log(`Lifting weights repettition ${rep}`);
+    }
 }
-for(let rep = 1; rep<6; rep++){
-    console.log(`Lifting weights repettition ${rep}`);
+
+*/
+
+
+////////////////////////////////
+// while loop example 
+////////////////////////////////
+
+let rep = 1;
+while (rep <= 10);{
+console.log(`------ Starting Exercise ${exercise}`);
+rep++;
 }
 
+let dice = Math.trunc(Math.random() * 6) + 1
 
-
+while (dice !== 6) {
+    console.log(`You rolled ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1[;]
+}
