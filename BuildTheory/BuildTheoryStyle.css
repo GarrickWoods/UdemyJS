@@ -1,0 +1,33 @@
+body {
+  background-color: rgba(255, 120, 10, 0.466);
+  font-family: "bebas-neue-semirounded", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+h1 {
+  font-size: 50px;
+}
+h3 {
+  font-size: 25px;
+}
+.text1 {
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  font-size: 15px;
+}
+.text2 {
+  color: rgb(0, 0, 0);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 20px;
+}
+.divider {
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  font-size: 25px;
+  font-style: italic;
+}
+#your-vehicle {
+  background-color: rgb(173, 171, 171);
+  border: 3px solid rgb(0, 0, 0);
+}
