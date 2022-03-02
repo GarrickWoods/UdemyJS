@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Build Theory</title>
-
+    <script src="CarMakeModelScript.js"></script>
     <link href="BuildTheoryStyle.css" rel="stylesheet" />
   </head>
   <body>
@@ -39,26 +39,32 @@
     </p>
 
     <p class="links">
-      <a
-        href="https://www.turbosquid.com/3d-models/4x4-generic-suv-3d-model-1524351"
-      >
-        4Runner Model</a
+      <a href="https://www.turbosquid.com/3d-models/car-5-max/1131384">
+        4Runner 5th gen Model</a
       >
     </p>
 
     <p class="links">
       <a
-        href="https://www.turbosquid.com/3d-models/toyota-tacoma-trd-3d-1391361"
+        href="https://www.turbosquid.com/3d-models/3d-toyota-tacoma-double-model-1533073"
       >
-        Tacoma Model</a
+        Tacoma 3rd gen Model</a
       >
     </p>
 
     <p class="links">
       <a
-        href="https://www.turbosquid.com/3d-models/jeep-wrangler-rubicon-3d-1662987"
+        href="https://www.turbosquid.com/3d-models/jeep-wrangler-unlimited-3d-model-1443055"
       >
-        Jeep Model</a
+        Jeep Wrangler JL 4D Model</a
+      >
+    </p>
+
+    <p class="links">
+      <a
+        href="https://www.turbosquid.com/3d-models/3d-jeep-wrangler-unlimited-smoky-model-1238446"
+      >
+        Jeep Wrangler JK 4D Model</a
       >
     </p>
 
@@ -72,15 +78,38 @@
     </p>
 
     <form id="your-vehicle">
-      <p class="divider">Your vehicle here</p>
+      <!-- <p class="divider">Your vehicle here</p> -->
       <p class="text2">
         I want to add as many vehicles as possible. To request that a vehicle is
         added to the site, please enter your vehicle make and model
       </p>
-      <input type="text" placeholder="Make" />
+      <!-- <input type="text" placeholder="Make" />
       <input type="text" placeholder="Model" />
       <input type="number" placeholder="Model year" />
-      <button>submit</button>
+      <button>submit</button> -->
+
+      <center>
+        <form name="myform" id="myForm">
+          <h3 id="dropdown-h3">Select your vehicle</h3>
+          <ul>
+            <li>
+              <select name="optone" id="makeSel" size="1">
+                <option value="" selected="selected">Select make</option>
+              </select>
+            </li>
+            <li>
+              <select name="opttwo" id="modelSel" size="1">
+                <option value="" selected="selected">Select model</option>
+              </select>
+            </li>
+            <li>
+              <select name="optthree" id="yearSel" size="1">
+                <option value="" selected="selected">Select year</option>
+              </select>
+            </li>
+          </ul>
+        </form>
+      </center>
     </form>
   </body>
 </html>

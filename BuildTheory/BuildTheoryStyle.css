@@ -1,33 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: justify;
+}
+
 body {
   background-color: rgba(255, 120, 10, 0.466);
   font-family: "bebas-neue-semirounded", sans-serif;
   font-weight: 400;
   font-style: normal;
+  padding: 75px;
 }
 h1 {
   font-size: 50px;
+  margin-bottom: 25px;
 }
 h3 {
   font-size: 25px;
+  margin-bottom: 20px;
 }
 .text1 {
   color: rgb(0, 0, 0);
   font-weight: 600;
   font-size: 15px;
+  margin-bottom: 10px;
 }
 .text2 {
   color: rgb(0, 0, 0);
   font-weight: 400;
   font-style: italic;
-  font-size: 20px;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 .divider {
   color: rgb(0, 0, 0);
   font-weight: 600;
   font-size: 25px;
   font-style: italic;
+  margin-bottom: 10px;
+}
+.links {
+  margin-bottom: 5px;
+}
+#logo-main {
+  width: 750px;
+  padding: 30px;
+  background-color: white;
 }
 #your-vehicle {
   background-color: rgb(173, 171, 171);
   border: 3px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  font-weight: 400;
+  font-size: 15px;
+  width: 750px;
+  padding: 25px;
+  text-align: center;
 }
