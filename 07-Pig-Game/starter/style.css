@@ -83,7 +83,7 @@ main {
   border-radius: 9px;
   color: #fff;
   width: 65%;
-  padding: 2rem;
+  padding: 3rem;
   text-align: center;
   transition: all 0.75s;
 }
@@ -164,4 +164,8 @@ main {
 .player--winner .name {
   font-weight: 700;
   color: #c7365f;
+}
+
+.hidden {
+  display: none;
 }
